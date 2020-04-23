@@ -12,7 +12,7 @@ export default {
     const { type, payload } = action;
     switch (type) {
       case TYPES.API_BUSY: {
-        return { ...state, apiBusy: payload };
+        return { ...state, apiBusy: payload, consoleData: "No result found!" };
       }
       case TYPES.API_ERROR: {
         return { ...state, apiBusy: false };
