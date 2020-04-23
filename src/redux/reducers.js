@@ -12,10 +12,10 @@ export default {
     const { type, payload } = action;
     switch (type) {
       case TYPES.API_BUSY: {
-        return { ...state, apiBusy: payload, consoleData: "No result found!" };
+        return { ...state, apiBusy: payload };
       }
       case TYPES.API_ERROR: {
-        return { ...state, apiBusy: false };
+        return { ...state, apiBusy: false, consoleData: "No result found!" };
       }
       case TYPES.GET_CAPSULES_SUCCESS: {
         return {
